@@ -17,7 +17,9 @@ const usersApi = '/api/users';
 const privilegesApi = '/api/privileges';
 
 // Routes
+const createUser = require('../routes/userServicesRoutes/createUser');
 
+app.use(`${usersApi}/createUser`, createUser);
 
 app.listen(port, () => {
     console.log(`Connection has been started at port: ${port}`);
